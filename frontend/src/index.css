@@ -12,9 +12,6 @@
   }
 }
 
-@import "tailwindcss";
-@plugin "daisyui";
-
 /* ======================================= */
 /*    GLOBAL LAYOUT BASE STYLES (no colors) */
 /* ======================================= */
@@ -56,16 +53,16 @@ body {
   @apply my-8 sm:my-12;
 }
 
-/* Headings hierarchy spacing */
+/* Headings hierarchy spacing - FIXED: removed space in "1 rem" */
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
+  margin: 0;  /* Reset margin - let Tailwind classes handle it */
   line-height: 1.2;
 }
 
 /* Paragraphs with consistent vertical rhythm */
 p {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0;  /* Reset - let Tailwind handle spacing */
+  margin-bottom: 0;
   line-height: 1.6;
 }
 

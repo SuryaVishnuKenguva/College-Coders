@@ -10,7 +10,7 @@ const Navbar = () => {
     `text-base hover:text-primary ${isActive ? "text-primary" : ""}`;
 
   return (
-    <nav className="navbar bg-base-200 px-6 h-6 relative lg:px-18">
+    <nav className="navbar bg-base-200 px-6 h-6 lg:px-18 sticky top-0 z-50">
       <div className="flex-1 flex items-center gap-2">
         <TbCode className="text-4xl text-primary" />
         <h1 className="text-2xl font-extrabold cursor-pointer">
