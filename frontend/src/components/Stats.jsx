@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { FaYoutube, FaUsers, FaVideo, FaPlay } from "react-icons/fa";
 
-const useCountUp = (end = 0, duration = 1500) => {
+const useCountUp = (end = 0, duration = 1500, shouldStart = false) => {
   const [count, setCount] = useState(0);
   useEffect(() => {
+    if (!shouldStart) return;
+    
     let start = 0;
     const step = end / (duration / 16);
     const timer = setInterval(() => {
@@ -15,13 +17,15 @@ const useCountUp = (end = 0, duration = 1500) => {
       setCount(Math.floor(start));
     }, 16);
     return () => clearInterval(timer);
-  }, [end, duration]);
+  }, [end, duration, shouldStart]);
   return count;
 };
 
 export default function Stats() {
   const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const sectionRef = useRef(null);
 
   const API_URL =
     "https://api.socialcounts.org/youtube-live-subscriber-count/UCDcT0Ejj2PlQxJrdfk9tq6g";
@@ -39,14 +43,40 @@ export default function Stats() {
       });
   }, []);
 
+  // Intersection Observer to detect when section is visible
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+          }
+        });
+      },
+      { threshold: 0.6 } // Trigger when 30% of section is visible
+    );
+
+    const curr = sectionRef.current;
+
+    if (curr) {
+      observer.observe(curr);
+    }
+
+    return () => {
+      if (curr) {
+        observer.unobserve(curr);
+      }
+    };
+  }, [hasAnimated]);
+
   const subscribers = stats?.API_sub ?? 0;
   const views =
     stats?.table?.find((x) => x.name === "Channel Views")?.count ?? 0;
   const videos = stats?.table?.find((x) => x.name === "Videos")?.count ?? 0;
 
-  const subCount = useCountUp(subscribers);
-  const viewCount = useCountUp(views);
-  const videoCount = useCountUp(videos);
+  const subCount = useCountUp(subscribers, 1500, hasAnimated);
+  const viewCount = useCountUp(views, 1500, hasAnimated);
+  const videoCount = useCountUp(videos, 1500, hasAnimated);
 
   const statsData = [
     {
@@ -70,7 +100,10 @@ export default function Stats() {
   ];
 
   return (
-    <section className="relative overflow-hidden py-20 bg-linear-to-br from-primary/5 via-base-100 to-secondary/5 dark:from-primary/10 dark:via-base-300 dark:to-secondary/10">
+    <section 
+      ref={sectionRef}
+      className="relative overflow-hidden py-20 bg-linear-to-br from-primary/5 via-base-100 to-secondary/5 dark:from-primary/10 dark:via-base-300 dark:to-secondary/10"
+    >
       {/* Decorative background elements */}
       <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-10 right-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl"></div>

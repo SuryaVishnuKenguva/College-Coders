@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { BsMoonStarsFill, BsSunFill } from "react-icons/bs"; 
 
 export default function ThemeController() {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
