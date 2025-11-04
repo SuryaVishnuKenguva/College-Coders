@@ -110,7 +110,7 @@ export default function CoursesShowcase() {
                   <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent"></div>
 
                   {/* Level badge */}
-                  <div className="absolute top-3 right-3">
+                  <div className="absolute bottom-3 right-3">
                     <span
                       className={`px-3 py-1 rounded-full text-xs font-bold backdrop-blur-sm ${getLevelColor(
                         course.level

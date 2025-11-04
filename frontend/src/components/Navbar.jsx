@@ -13,9 +13,11 @@ const Navbar = () => {
     <nav className="navbar bg-base-200 px-6 h-6 lg:px-18 sticky top-0 z-50">
       <div className="flex-1 flex items-center gap-2">
         <TbCode className="text-4xl text-primary" />
-        <h1 className="text-2xl font-extrabold cursor-pointer">
-          College<span className="text-primary"> Coders</span>
-        </h1>
+        <NavLink to="/">
+          <h1 className="text-2xl font-extrabold cursor-pointer">
+            College<span className="text-primary"> Coders</span>
+          </h1>
+        </NavLink>
       </div>
 
       {/* Desktop Menu - now shows only on lg screens and up */}
@@ -51,10 +53,7 @@ const Navbar = () => {
       </ul>
 
       {/* Mobile Menu Button - now shows on medium and small screens */}
-      <button
-        className="lg:hidden text-3xl"
-        onClick={() => setIsOpen(!isOpen)}
-      >
+      <button className="lg:hidden text-3xl" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <TbX /> : <TbMenu2 />}
       </button>
 
