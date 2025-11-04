@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section
       className="relative flex flex-col justify-center items-center text-center 
-      h-[92vh] px-6 bg-gradient-to-br from-base-100 via-base-200 to-base-300 
+      h-[92vh] px-6 bg-linear-to-br from-base-100 via-base-200 to-base-300 
       dark:from-gray-950 dark:to-gray-900 bg-cover bg-center"
       style={{
         backgroundImage:
