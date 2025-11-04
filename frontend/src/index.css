@@ -1,0 +1,110 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Global font styles */
+@layer base {
+  html {
+    font-family: "Poppins", sans-serif;
+  }
+
+  code, pre {
+    font-family: "JetBrains Mono", monospace;
+  }
+}
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* ======================================= */
+/*    GLOBAL LAYOUT BASE STYLES (no colors) */
+/* ======================================= */
+
+/* Use border-box for everything */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin/padding everywhere */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Smooth scrolling across site */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Default body structure: full height flex column */
+body {
+  @apply flex flex-col min-h-screen font-sans antialiased;
+}
+
+/* The main app wrapper (#root from React) */
+#root {
+  @apply flex flex-col flex-1;
+}
+
+/* Give consistent horizontal padding/margins to main content area */
+.page-container {
+  @apply flex flex-col w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Provide standard vertical spacing for content sections */
+.section {
+  @apply my-8 sm:my-12;
+}
+
+/* Headings hierarchy spacing */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Paragraphs with consistent vertical rhythm */
+p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Remove link underlines by default, add on hover */
+@layer base {
+  a {
+    @apply no-underline;
+  }
+  a:hover {
+    @apply no-underline;
+  }
+}
+
+/* Optional – make images always fit their containers */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Optional – force lists to have predictable spacing */
+ul, ol {
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Buttons – inherit font and cursor style globally */
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Forms – consistent spacing */
+input, textarea, select {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
