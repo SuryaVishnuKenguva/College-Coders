@@ -105,3 +105,22 @@ input, textarea, select {
   padding: 0;
   outline: none;
 }
+
+/* Scrollbar customization */
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--p, rgb(129, 99, 211)); /* DaisyUI primary fallback */
+    border-radius: 4px;
+    opacity: 0.5;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    opacity: 1;
+  }
+}

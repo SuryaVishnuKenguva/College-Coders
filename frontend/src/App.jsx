@@ -5,6 +5,7 @@ import Courses from "./pages/Courses";
 import Projects from "./pages/Projects";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import CourseDetail from "./pages/CourseDetail";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/courses/:slug" element={<CourseDetail />} />
         </Routes>
       </main>
     </div>
