@@ -5,7 +5,7 @@ const useCountUp = (end = 0, duration = 1500, shouldStart = false) => {
   const [count, setCount] = useState(0);
   useEffect(() => {
     if (!shouldStart) return;
-    
+
     let start = 0;
     const step = end / (duration / 16);
     const timer = setInterval(() => {
@@ -83,41 +83,40 @@ export default function Stats() {
       icon: FaVideo,
       count: videoCount,
       label: "Quality Videos",
-      description: "Hands-on tutorials & projects"
+      description: "Hands-on tutorials & projects",
     },
     {
       icon: FaUsers,
       count: subCount,
       label: "Amazing Subscribers",
-      description: "Thank you for your support! ❤️"
+      description: "Thank you for your support! ❤️",
     },
     {
       icon: FaYoutube,
       count: viewCount,
       label: "Total Views",
-      description: "Empowering coders worldwide"
-    }
+      description: "Empowering coders worldwide",
+    },
   ];
 
   return (
-    <section 
+    <section
       ref={sectionRef}
-      className="relative overflow-hidden py-20 bg-linear-to-br from-primary/5 via-base-100 to-secondary/5 dark:from-primary/10 dark:via-base-300 dark:to-secondary/10"
+      className="relative overflow-hidden py-20 bg-linear-to-br from-primary/5 via-base-100 to-primary/5 dark:from-primary/10 dark:via-base-300 dark:to-primary/10"
     >
       {/* Decorative background elements */}
       <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 right-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 dark:bg-primary/20 rounded-full mb-6">
-            <FaPlay className="text-primary text-sm" />
-            <span className="text-sm font-bold text-primary uppercase tracking-wide">
-              YouTube Channel Stats
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/30">
+            <FaPlay className="text-primary text-base" />
+            <span className="text-xs font-bold text-primary uppercase tracking-widest">
+              YOUTUBE STATS
             </span>
           </div>
-
           <div className="mb-6">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-base-content mb-9">
               Growing Together,{" "}
@@ -135,7 +134,7 @@ export default function Stats() {
           {statsData.map((stat, index) => {
             const Icon = stat.icon;
             return (
-              <div 
+              <div
                 key={index}
                 className="group relative bg-base-200 dark:bg-base-100 rounded-2xl p-8 shadow-xl hover:shadow-primary/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-primary/20 hover:border-primary/50"
               >

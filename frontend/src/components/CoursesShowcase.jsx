@@ -66,7 +66,7 @@ export default function CoursesShowcase() {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-linear-to-r from-primary/20 to-secondary/20 rounded-full mb-4 backdrop-blur-sm border border-primary/30">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/30">
             <FaGraduationCap className="text-primary text-base" />
             <span className="text-xs font-bold text-primary uppercase tracking-widest">
               Featured Courses
@@ -75,7 +75,7 @@ export default function CoursesShowcase() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-base-content mb-3 leading-tight">
             Start Your Journey to{" "}
-            <span className="bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <span className="bg-primary bg-clip-text text-transparent">
               Mastery
             </span>
           </h2>
@@ -159,7 +159,7 @@ export default function CoursesShowcase() {
         <div className="text-center">
           <NavLink
             to="/courses"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-linear-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-bold text-base rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-bold text-base rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group"
           >
             <span>View All Courses</span>
             <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />

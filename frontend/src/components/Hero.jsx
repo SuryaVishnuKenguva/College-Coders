@@ -18,7 +18,7 @@ const Hero = () => {
       {/* Overlay - No transition to prevent flash */}
       <div
         className={`absolute inset-0 backdrop-blur-sm ${
-          isDark ? "bg-black/70" : "bg-white/75"
+          isDark ? "bg-black/70" : "bg-white/60"
         }`}
       ></div>
 
@@ -34,16 +34,16 @@ const Hero = () => {
         {/* Main heading */}
         <div className="mb-4">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight sm:whitespace-nowrap">
-            Welcome to{" "}
-            <span className="text-primary">
-              College Coders
+            Welcome to <span className="bg-primary bg-clip-text text-transparent">College</span>
+            <span className="bg-primary bg-clip-text text-transparent">
+              {" "}Coders
             </span>
           </h1>
         </div>
 
         {/* Typing animation */}
         <div className="mb-7">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-primary min-h-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold min-h-10 text-amber-300">
             <TypeAnimation
               sequence={[
                 "Learn HTML",
@@ -62,7 +62,6 @@ const Hero = () => {
               wrapper="span"
               repeat={Infinity}
               cursor={true}
-              className="text-primary"
             />
           </h2>
         </div>
@@ -70,9 +69,9 @@ const Hero = () => {
         {/* Description */}
         <div className="mb-8">
           <p className="text-base-content/70 max-w-xl mx-auto text-sm sm:text-base md:text-lg">
-            Learn modern technologies step by step — build real projects, enhance
-            your coding skills, and join our growing community of enthusiastic
-            developers today.
+            Learn modern technologies step by step — build real projects,
+            enhance your coding skills, and join our growing community of
+            enthusiastic developers today.
           </p>
         </div>
 

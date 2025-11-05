@@ -6,7 +6,6 @@ export default function Testimonials() {
       id: 1,
       text: `Mee channel future laa chala manchi IT skills nercine channel ga avthundhi bro really
       Millions of views and subscribers vastharu... 🎉`,
-      gradient: "from-blue-500 to-cyan-500",
       position: "top-left",
     },
     {
@@ -15,14 +14,12 @@ export default function Testimonials() {
       Slow motion lo petti chustthey inka super ga ardham avtundi..
       Thank you very very much mama ❤️❤️🎉🎉
       I'm very lucky to having YouTube teacher like you 😊`,
-      gradient: "from-purple-500 to-pink-500",
       position: "top-right",
     },
     {
       id: 3,
       text: `Your exercises and challenging exercises are best and next level bro for being consistent ✨✨
 - thank you`,
-      gradient: "from-emerald-500 to-teal-500",
       position: "bottom-left",
     },
     {
@@ -30,23 +27,21 @@ export default function Testimonials() {
       text: `I've watched so many JS tutorials, but this one finally made everything click 😍
 I never subscribe to anyone, but your explanation is just next level —
 subscribed and liked instantly! ❤️🔥`,
-      gradient: "from-orange-500 to-rose-500",
       position: "bottom-right",
     },
   ];
 
   return (
-    <section className="relative flex items-center justify-center bg-linear-to-br from-base-100 via-base-200 to-base-100 dark:from-base-300 dark:via-base-200 dark:to-base-300 overflow-hidden">
+    <section className="relative flex items-center justify-center bg-base-300 overflow-hidden">
       {/* Animated background orbs */}
       <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse"></div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 py-8">
         {/* Header */}
         <div className="text-center mb-8">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-base-content mb-3 leading-tight">
             Student{" "}
-            <span className="bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <span className="bg-primary bg-clip-text text-transparent">
               Testimonials
             </span>
           </h2>
@@ -64,7 +59,7 @@ subscribed and liked instantly! ❤️🔥`,
             >
               {/* Glowing effect on hover */}
               <div
-                className={`absolute -inset-1 bg-linear-to-r ${testimonial.gradient} rounded-3xl opacity-0 group-hover:opacity-30 blur-xl transition-all duration-500`}
+                className={`absolute -inset-1 bg-primary rounded-3xl opacity-0 group-hover:opacity-30 blur-xl transition-all duration-500`}
               ></div>
 
               {/* Card */}
@@ -72,7 +67,7 @@ subscribed and liked instantly! ❤️🔥`,
                 {/* Quote icon with gradient */}
                 <div className="mb-4">
                   <div
-                    className={`inline-flex w-12 h-12 bg-linear-to-br ${testimonial.gradient} rounded-xl items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                    className={`inline-flex w-12 h-12 bg-primary rounded-xl items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}
                   >
                     <FaQuoteLeft className="text-white text-xl" />
                   </div>
@@ -86,9 +81,7 @@ subscribed and liked instantly! ❤️🔥`,
                 {/* Gradient accent line */}
                 <div className="relative pt-4">
                   <div
-                    className={`h-1 bg-linear-to-r ${
-                      testimonial.gradient
-                    } rounded-full transition-all duration-500 ${
+                    className={`h-1 bg-primary rounded-full transition-all duration-500 ${
                       index % 2 === 0
                         ? "w-16 group-hover:w-full"
                         : "w-full group-hover:w-16 ml-auto"
@@ -98,7 +91,7 @@ subscribed and liked instantly! ❤️🔥`,
 
                 {/* Decorative corner gradient */}
                 <div
-                  className={`absolute bottom-0 right-0 w-32 h-32 bg-linear-to-tl ${testimonial.gradient} opacity-5 rounded-tl-full rounded-br-3xl group-hover:opacity-10 transition-opacity duration-500`}
+                  className={`absolute bottom-0 right-0 w-32 h-32 bg-primary opacity-5 rounded-tl-full rounded-br-3xl group-hover:opacity-10 transition-opacity duration-500`}
                 ></div>
               </div>
             </div>
