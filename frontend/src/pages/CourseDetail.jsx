@@ -2,10 +2,10 @@ import { useState, useEffect} from "react";
 import { fetchAllPlaylistVideos } from "../utils/youtubeAPI";
 import CourseHero from "../components/CourseHero";
 import CourseInfoSection from "../components/CourseInfoSection";
-import CoursePlayList from "../components/CoursePlayList";
 import CourseSidebar from "../components/CourseSidebar";
 import { courseData } from "../data/courseData";
 import { useParams } from "react-router-dom";
+import CoursePlaylist from "../components/CoursePlayList";
 
 export default function CourseDetail() {
   const { slug } = useParams();
@@ -56,7 +56,7 @@ export default function CourseDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-base-100 via-base-200 to-base-100 dark:from-base-300 dark:via-base-200 dark:to-base-300">
+    <div className="min-h-screen bg-linear-to-br from-base-100 via-base-200 to-base-100 dark:from-base-300 dark:via-base-200 dark:to-base-300">
       {/* Hero Section */}
       <CourseHero course={course} onBack={handleBack} />
 
@@ -66,7 +66,7 @@ export default function CourseDetail() {
           {/* Left Column: Course Details (takes 2 columns on large screens) */}
           <div className="lg:col-span-2 space-y-6 sm:space-y-8">
             <CourseInfoSection course={course} />
-            <CoursePlayList videos={videos} loading={loading} error={error} />
+            <CoursePlaylist videos={videos} loading={loading} error={error} />
           </div>
 
           {/* Right Column: Sidebar (takes 1 column on large screens) */}
