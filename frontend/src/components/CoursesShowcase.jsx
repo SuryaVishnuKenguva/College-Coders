@@ -16,7 +16,6 @@ export default function CoursesShowcase() {
       videoUrl: "https://www.youtube.com/watch?v=TIRRNHfcjl8",
       duration: "06:21:14",
       level: "Beginner",
-      color: "from-blue-500/20 to-cyan-500/20",
     },
     {
       id: 2,
@@ -27,7 +26,6 @@ export default function CoursesShowcase() {
       videoUrl: "https://www.youtube.com/watch?v=PdiLYruKPxI",
       duration: "00:50:06",
       level: "Beginner",
-      color: "from-purple-500/20 to-pink-500/20",
     },
     {
       id: 3,
@@ -38,7 +36,6 @@ export default function CoursesShowcase() {
       videoUrl: "https://www.youtube.com/watch?v=Flkm2aear6A",
       duration: "11:33:29",
       level: "Intermediate",
-      color: "from-emerald-500/20 to-teal-500/20",
     },
   ];
 
@@ -61,7 +58,7 @@ export default function CoursesShowcase() {
     >
       {/* Decorative background */}
       <div className="absolute top-10 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 left-10 w-64 h-64 bg-secondary/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
         {/* Header */}
@@ -95,7 +92,7 @@ export default function CoursesShowcase() {
               <div className="relative h-full bg-base-100 dark:bg-base-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-base-300/50 hover:border-primary/40 flex flex-col">
                 {/* Gradient overlay background */}
                 <div
-                  className={`absolute inset-0 bg-linear-to-br ${course.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                  className={`absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
                 ></div>
 
                 {/* Thumbnail */}

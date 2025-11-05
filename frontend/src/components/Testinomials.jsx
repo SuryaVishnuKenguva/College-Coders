@@ -32,10 +32,8 @@ subscribed and liked instantly! ❤️🔥`,
   ];
 
   return (
-    <section className="relative flex items-center justify-center bg-base-300 overflow-hidden">
-      {/* Animated background orbs */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-
+    <section className="relative flex items-center justify-center bg-linear-to-br from-base-100 via-base-200 to-base-100 dark:from-base-300 dark:via-base-200 dark:to-base-300 overflow-hidden">
+      
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 py-8">
         {/* Header */}
         <div className="text-center mb-8">
