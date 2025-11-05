@@ -5,7 +5,7 @@ import CourseInfoSection from "../components/CourseInfoSection";
 import CourseSidebar from "../components/CourseSidebar";
 import { courseData } from "../data/courseData";
 import { useParams } from "react-router-dom";
-import CoursePlaylist from "../components/CoursePlaylist";
+import CourseList from "../components/CourseList";
 
 export default function CourseDetail() {
   const { slug } = useParams();
@@ -66,7 +66,7 @@ export default function CourseDetail() {
           {/* Left Column: Course Details (takes 2 columns on large screens) */}
           <div className="lg:col-span-2 space-y-6 sm:space-y-8">
             <CourseInfoSection course={course} />
-            <CoursePlaylist videos={videos} loading={loading} error={error} />
+            <CourseList videos={videos} loading={loading} error={error} />
           </div>
 
           {/* Right Column: Sidebar (takes 1 column on large screens) */}
