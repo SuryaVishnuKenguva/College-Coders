@@ -3,7 +3,7 @@ import { FaExclamationCircle, FaVideo } from "react-icons/fa";
 import VideoListItem from "./VideoListItem";
 import VideoModal from "./VideoModal";
 
-export default function CoursePlaylist({ videos, loading, error }) {
+export default function CoursePlayList({ videos, loading, error }) {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   const handleVideoClick = (video) => {

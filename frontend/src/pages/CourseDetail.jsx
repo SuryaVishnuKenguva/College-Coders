@@ -56,7 +56,7 @@ export default function CourseDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-base-100 via-base-200 to-base-100 dark:from-base-300 dark:via-base-200 dark:to-base-300">
+    <div className="min-h-screen bg-gradient-to-br from-base-100 via-base-200 to-base-100 dark:from-base-300 dark:via-base-200 dark:to-base-300">
       {/* Hero Section */}
       <CourseHero course={course} onBack={handleBack} />
 
