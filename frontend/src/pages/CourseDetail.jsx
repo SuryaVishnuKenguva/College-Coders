@@ -5,7 +5,7 @@ import CourseInfoSection from "../components/CourseInfoSection";
 import CourseSidebar from "../components/CourseSidebar";
 import { courseData } from "../data/courseData";
 import { useParams } from "react-router-dom";
-import CoursePlaylist from "../components/CoursePlayList";
+import CoursePlaylist from "../components/CoursePlaylist";
 
 export default function CourseDetail() {
   const { slug } = useParams();
